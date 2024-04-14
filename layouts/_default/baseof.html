@@ -21,6 +21,10 @@
   Simply place a custom_head.html into
   your local /layouts/partials-directory -->
   {{- partial "custom_head.html" . -}}
+  
+  {{ if or .Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+  {{ end }}
 </head>
 
 <body>
