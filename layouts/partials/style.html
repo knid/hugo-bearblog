@@ -24,7 +24,8 @@
   }
 
   a {
-    color: #3273dc;
+    color: #8cc2dd !important;
+    text-decoration: none;
     /*color: #ff5e6c;*/
   }
 
@@ -126,9 +127,21 @@
     color: #8b6fcb;
   }
 
+  .project-title {
+      margin:0;
+  }
+
+  .project-desc {
+      margin:0;
+  }
+
+  .project-link {
+    display: block;
+  }
+
   @media (prefers-color-scheme: dark) {
     body {
-      background-color: #333;
+      background-color: #111;
       color: #ddd;
     }
 
@@ -170,4 +183,30 @@
     }
   }
 
+  .picture-wrapper {
+      position: relative;
+  }
+
+  .picture {
+      position: absolute;
+      top:0;
+      right:0;
+      width: 150px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .picture {
+      width: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .picture {
+      width: 55px;
+    }
+  }
 </style>

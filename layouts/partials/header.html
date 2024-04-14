@@ -1,3 +1,9 @@
+{{ if .Site.Params.profilePictureURL }}
+<div class="picture-wrapper">
+    <img class="picture" src="/{{ .Site.Params.profilePictureURL }}" alt="picture">
+</div>
+{{ end }}
+
 <a href="{{ "" | relURL }}" class="title">
   <h2>{{ .Site.Title }}</h2>
 </a>
