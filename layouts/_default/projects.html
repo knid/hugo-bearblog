@@ -1,0 +1,36 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<content>
+  {{ if .Data.Singular }}
+  <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3>
+  <small>
+    <a href="{{ "projects" | relURL }}">Remove filter</a>
+  </small>
+  {{ end }}
+  <ul class="blog-posts">
+    {{ range .Pages }}
+    <li>
+      {{ if .Date }}
+        <span>
+          <i>
+            <time datetime='{{ .Date.Format "2006" }}' pubdate>
+              {{ .Date.Format "2006" }}
+            </time>
+          </i>
+        </span>
+      {{ end }}
+      <div>
+        <h3 class="project-title">{{ .Title }}</h3>
+        <p class="project-desc">{{ .Description }}</p>
+        <a class="project-link" href="{{ .Params.params.source }}">{{ .Params.params.source }}</a>
+        <a class="project-link" href="{{ .Params.params.link }}">{{ .Params.params.link }}</a>
+      </div>
+    </li>
+    {{ else }}
+    <li>
+        No {{ lower .Title }} yet
+    </li>
+    {{ end }}
+  </ul>
+</content>
+{{ end }}
