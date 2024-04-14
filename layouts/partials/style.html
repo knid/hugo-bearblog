@@ -142,6 +142,7 @@
     display: block;
   }
 
+{{ if .Site.Params.profilePicture }}
   .picture-wrapper {
       position: relative;
       backg
@@ -157,6 +158,13 @@
       background-position: center center;
       background-size: cover;
   }
+
+  @media only screen and (min-width: 700px) {
+    .responsive-title {
+      width: 80%;
+    }
+  }
+{{ end }}
 
   @media only screen and (max-width: 700px) {
     .picture {
