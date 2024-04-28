@@ -2,3 +2,4 @@ User-Agent: *
 Sitemap: {{ "sitemap.xml" | absURL }}
 Disallow: /public-services/
 Disallow: /pgp/
+Disallow: /pgp.txt/
